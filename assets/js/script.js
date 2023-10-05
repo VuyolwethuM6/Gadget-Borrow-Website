@@ -183,6 +183,7 @@ const validateInputs = () => {
         setError(feedbackValue, 'Feedback is required');
    
     } else {
+        alert("Form submitted successfully");
         setSuccess(feedbackValue);
     }
 };
