@@ -583,3 +583,13 @@ function rand(max) {
       document.getElementById("mazeContainer").style.opacity = "100";
     }
   }
+// Çloses the game popup
+//Add a click event listener to the button
+document.getElementById('closeButton').addEventListener('click', function() {
+  closePopupWindow(); // Close the popup window
+});
+
+// Function to close the popup window
+function closePopupWindow() {
+  window.close(); // Close the popup window
+}
