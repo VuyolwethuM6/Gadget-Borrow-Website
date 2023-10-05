@@ -1486,3 +1486,9 @@ width: 75%;
     bottom: 0;
   }
 }
+/* Success message */
+#form-status{
+  padding-left: 16px;
+  font-family: var(--ff-poppins);
+  color: green;
+}
