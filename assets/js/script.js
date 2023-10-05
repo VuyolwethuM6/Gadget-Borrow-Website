@@ -122,6 +122,7 @@ form.addEventListener('submit', e => {
     e.preventDefault();
 
     validateInputs();
+    alert("Form submitted successfully");
 });
 
 const setError = (element, message) => {
@@ -183,7 +184,7 @@ const validateInputs = () => {
         setError(feedbackValue, 'Feedback is required');
    
     } else {
-        alert("Form submitted successfully");
+        
         setSuccess(feedbackValue);
     }
 };
