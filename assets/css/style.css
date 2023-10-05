@@ -851,13 +851,15 @@ main {
   border-radius: 4px;
   font-size: 12px;
   
+  
 }
 #form h1{
   padding-left: 32px;
   color: chocolate;
 }
-.footer #myDiv #form #username{
+.footer #myDiv #form, #username ,#email, #subject, #feedback {
   color:chocolate ;
+  
 }
 
 #form button {
@@ -897,6 +899,9 @@ width: 75%;
   padding-bottom: 15px ;
 }
 
+#imageContainer{
+  align-items: center;
+}
 
 .input-control input:focus {
   outline: 0;

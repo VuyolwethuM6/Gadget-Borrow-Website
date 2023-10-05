@@ -703,7 +703,11 @@
           <div class="input-control">
               <label for="feedback">Feed back</label>
               <textarea class="feedback" id="feedback" name="feedback" cols="30" rows="10"></textarea>
-             
+          </div>
+          <div class="input-control">
+            <label for="feedback">Upload image file</label>
+            <input type="file" id="fileInput" accept=".jpg, .jpeg, .png" onchange="handleFileUpload()">
+            <div id="imageContainer"></div>
           </div>
           <button id="form-button" type="submit" >Submit</button>
       </form>

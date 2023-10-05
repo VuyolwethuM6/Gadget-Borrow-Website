@@ -278,3 +278,38 @@ window.onload = () => {
     checkCookie();
   }, 2000);
 };
+
+function handleFileUpload() {
+  const fileInput = document.getElementById('fileInput');
+  const imageContainer = document.getElementById('imageContainer');
+
+  // Check if a file is selected
+  if (fileInput.files.length === 0) {
+      alert('Please select a file.');
+      return;
+  }
+
+  const file = fileInput.files[0];
+  const reader = new FileReader();
+
+  reader.onload = function (event) {
+      // `event.target.result` contains the binary data as an ArrayBuffer
+      const binaryData = event.target.result;
+
+      // Create an image element and set its source to the binary data
+      const image = document.createElement('img');
+      image.src = arrayBufferToDataURL(binaryData);
+
+      // Append the image to the container
+      imageContainer.appendChild(image);
+  };
+
+  reader.readAsArrayBuffer(file);
+}
+
+// Helper function to convert ArrayBuffer to Data URL for displaying images
+function arrayBufferToDataURL(arrayBuffer) {
+  const blob = new Blob([arrayBuffer], { type: 'image/jpeg' }); // Adjust the type as needed
+  const urlCreator = window.URL || window.webkitURL;
+  return urlCreator.createObjectURL(blob);
+}
