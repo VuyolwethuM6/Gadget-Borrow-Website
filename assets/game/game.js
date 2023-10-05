@@ -584,12 +584,9 @@ function rand(max) {
     }
   }
 // Çloses the game popup
-//Add a click event listener to the button
-document.getElementById('closeButton').addEventListener('click', function() {
-  closePopupWindow(); // Close the popup window
-});
-
-// Function to close the popup window
-function closePopupWindow() {
-  window.close(); // Close the popup window
+function closeChildWindow() {
+  // Optionally, you can send data back to the parent window
+  const dataToSend = { message: 'Hello from the child window!' };
+  window.opener.postMessage(dataToSend, '*'); // '*' allows communication with any window
+  window.close(); // Close the child window
 }

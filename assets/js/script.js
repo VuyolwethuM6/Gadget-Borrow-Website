@@ -240,7 +240,7 @@ toggleButton.addEventListener('click', function () {
 function openGameWindow(){
   window.open("/assets/Game/game.html", 
               "Maze - Game", 
-              "popup,left=100,top=100,width=520,height=520");
+              "popup,left=100,top=100,width=520,height=600");
 }
 
 // JavaScript for the cookie consent banner
